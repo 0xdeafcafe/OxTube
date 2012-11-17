@@ -12,6 +12,10 @@ namespace OxTube
 {
     public partial class App : Application
     {
+        #region Storage
+        public static ItemViewModels.HubViewModel.StopInfo SelectedStopInfo;
+        #endregion
+
         /// <summary>
         /// Provides easy access to the root frame of the Phone Application.
         /// </summary>

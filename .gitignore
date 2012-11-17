@@ -30,6 +30,11 @@ local.properties
 
 
 #################
+# Linux Server
+#################
+password_storage.php
+
+#################
 ## Visual Studio
 #################
 

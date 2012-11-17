@@ -1,0 +1,72 @@
+﻿[
+	{
+		"StopName": "Gloucester Green bays 2-3",
+		"StopCode": 69326524,
+		"StopURL": "http://www.oxontime.com/Naptan.aspx?t=departure&sa=69326524&dc=&ac=96&vc=TUBE&x=451004&y=206385&format=xhtml"
+	},
+	{
+		"StopName": "Speedwell St S2",
+		"StopCode": 69345627,
+		"StopURL": "http://www.oxontime.com/Naptan.aspx?t=departure&sa=69345627&dc=&ac=96&vc=TUBE&x=451308&y=205789&format=xhtml"
+	},
+	{
+		"StopName": "Queen's Lane K4",
+		"StopCode": 69345692,
+		"StopURL": "http://www.oxontime.com/Naptan.aspx?t=departure&sa=69345692&dc=&ac=96&vc=TUBE&x=451811&y=206270&format=xhtml"
+	},
+	{
+		"StopName": "St Clements St",
+		"StopCode": 69323265,
+		"StopURL": "http://www.oxontime.com/Naptan.aspx?t=departure&sa=69323265&dc=&ac=96&vc=TUBE&x=452503&y=206025&format=xhtml"
+	},
+	{
+		"StopName": "Brookes Univ B3",
+		"StopCode": 69347427,
+		"StopURL": "http://www.oxontime.com/Naptan.aspx?t=departure&sa=69347427&dc=&ac=96&vc=TUBE&x=453606&y=206654&format=xhtml"
+	},
+	{
+		"StopName": "Headington Shops HS5",
+		"StopCode": 69347625,
+		"StopURL": "http://www.oxontime.com/Naptan.aspx?t=departure&sa=69347625&dc=&ac=96&vc=TUBE&x=454635&y=207168&format=xhtml"
+	},
+	{
+		"StopName": "Green Road Roundabout",
+		"StopCode": 69325687,
+		"StopURL": "http://www.oxontime.com/Naptan.aspx?t=departure&sa=69325687&dc=&ac=96&vc=TUBE&x=455361&y=207405&format=xhtml"
+	},
+	{
+		"StopName": "Thornhill Park & Ride Bay A",
+		"StopCode": 69326542,
+		"StopURL": "http://www.oxontime.com/Naptan.aspx?t=departure&sa=69326542&dc=&ac=96&vc=TUBE&x=456602&y=207326&format=xhtml"
+	},
+	{
+		"StopName": "Lewknor Turn",
+		"StopCode": 69345498,
+		"StopURL": "http://www.oxontime.com/Naptan.aspx?t=departure&sa=69345498&dc=&ac=96&vc=TUBE&x=472100&y=197680&format=xhtml"
+	},
+	{
+		"StopName": "Hillington Station Stop A",
+		"StopCode": 27246352,
+		"StopURL": "http://www.oxontime.com/Naptan.aspx?t=departure&sa=27246352&dc=&ac=96&vc=TUBE&x=507676&y=185006&format=xhtml"
+	},
+	{
+		"StopName": "Shepard's Bush Stop HJ",
+		"StopCode": 27245467,
+		"StopURL": "http://www.oxontime.com/Naptan.aspx?t=departure&sa=27245354&dc=&ac=96&vc=TUBE&x=525468&y=180523&format=xhtml"
+	},
+	{
+		"StopName": "Notting Hill Gate Stop M",
+		"StopCode": 27245354,
+		"StopURL": "http://www.oxontime.com/Naptan.aspx?t=departure&sa=27245354&dc=&ac=96&vc=TUBE&x=525468&y=180523&format=xhtml"
+	},
+	{
+		"StopName": "Marble Arch Stop S",
+		"StopCode": 27245357,
+		"StopURL": "http://www.oxontime.com/Naptan.aspx?t=departure&sa=27245357&dc=&ac=96&vc=TUBE&x=527952&y=180849&format=xhtml"
+	},
+	{
+		"StopName": "Victoria Buckingham Palace Road Stop P",
+		"StopCode": 27245423,
+		"StopURL": "http://www.oxontime.com/Naptan.aspx?t=departure&sa=27245423&dc=&ac=96&vc=TUBE&x=528934&y=179279&format=xhtml"
+	}
+]

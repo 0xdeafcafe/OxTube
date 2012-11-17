@@ -1,0 +1,72 @@
+﻿[
+	{
+		"StopName": "Victoria Greenline Coach Station stop 10",
+		"StopCode": 27245469,
+		"StopURL": "http://www.oxontime.com/Naptan.aspx?t=departure&sa=27245469&dc=&ac=96&vc=TUBE&x=528697&y=178724&format=xhtml"
+	},
+	{
+		"StopName": "Grosvenor Gardens",
+		"StopCode": 27245473,
+		"StopURL": "http://www.oxontime.com/Naptan.aspx?t=departure&sa=27245473&dc=&ac=96&vc=TUBE&x=528784&y=179163&format=xhtml"
+	},
+	{
+		"StopName": "Marble Arch stop 14A",
+		"StopCode": 27247584,
+		"StopURL": "http://www.oxontime.com/Naptan.aspx?t=departure&sa=27247584&dc=&ac=96&vc=TUBE&x=527883&y=180825&format=xhtml"
+	},
+	{
+		"StopName": "Notting Hill Gate stop N",
+		"StopCode": 27245367,
+		"StopURL": "http://www.oxontime.com/Naptan.aspx?t=departure&sa=27245367&dc=&ac=96&vc=TUBE&x=525499&y=180511&format=xhtml"
+	},
+	{
+		"StopName": "Shepherd's Bush stop HD",
+		"StopCode": 27245482,
+		"StopURL": "http://www.oxontime.com/Naptan.aspx?t=departure&sa=27245482&dc=&ac=96&vc=TUBE&x=524040&y=179977&format=xhtml"
+	},
+	{
+		"StopName": "Hillingdon",
+		"StopCode": 27245426,
+		"StopURL": "http://www.oxontime.com/Naptan.aspx?t=departure&sa=27245426&dc=&ac=96&vc=TUBE&x=507731&y=184791&format=xhtml"
+	},
+	{
+		"StopName": "Lewknor Turn",
+		"StopCode": 69345497,
+		"StopURL": "http://www.oxontime.com/Naptan.aspx?t=departure&sa=69345497&dc=&ac=96&vc=TUBE&x=471775&y=197477&format=xhtml"
+	},
+	{
+		"StopName": "Thornhill Park & Ride bay C",
+		"StopCode": 69347253,
+		"StopURL": "http://www.oxontime.com/Naptan.aspx?t=departure&sa=69347253&dc=&ac=96&vc=TUBE&x=456619&y=207315&format=xhtml"
+	},
+	{
+		"StopName": "Gladstone Road",
+		"StopCode": 69325627,
+		"StopURL": "http://www.oxontime.com/Naptan.aspx?t=departure&sa=69325627&dc=&ac=96&vc=TUBE&x=455085&y=207332&format=xhtml"
+	},
+	{
+		"StopName": "Headington Shops stop HS4",
+		"StopCode": 69347624,
+		"StopURL": "http://www.oxontime.com/Naptan.aspx?t=departure&sa=69347624&dc=&ac=96&vc=TUBE&x=454594&y=207137&format=xhtml"
+	},
+	{
+		"StopName": "Oxford Brookes University stop B4",
+		"StopCode": 69347426,
+		"StopURL": "http://www.oxontime.com/Naptan.aspx?t=departure&sa=69347426&dc=&ac=96&vc=TUBE&x=453463&y=206580&format=xhtml"
+	},
+	{
+		"StopName": "St Clement's",
+		"StopCode": 69323289,
+		"StopURL": "http://www.oxontime.com/Naptan.aspx?t=departure&sa=69323289&dc=&ac=96&vc=TUBE&x=452421&y=205992&format=xhtml"
+	},
+	{
+		"StopName": "High Street stop J1",
+		"StopCode": 69345693,
+		"StopURL": "http://www.oxontime.com/Naptan.aspx?t=departure&sa=69345693&dc=&ac=96&vc=TUBE&x=451834&y=206249&format=xhtml"
+	},
+	{
+		"StopName": "St Aldate's stop H5",
+		"StopCode": 69326543,
+		"StopURL": "http://www.oxontime.com/Naptan.aspx?t=departure&sa=69326543&dc=&ac=96&vc=TUBE&x=451405&y=205992&format=xhtml"
+	}
+]
