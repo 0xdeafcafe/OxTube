@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Deployment xmlns="http://schemas.microsoft.com/windowsphone/2012/deployment" AppPlatformVersion="8.0">
   <DefaultLanguage xmlns="" code="en-GB" />
-  <App xmlns="" ProductID="{aaaade39-2bac-4ad6-ba6c-27ea892759a3}" Title="OxTube" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="Xeraxic Software" Description="Sample description" Publisher="OxTube" PublisherID="{8a8f6d10-2f37-4709-86c6-1068b4a085a9}">
+  <App xmlns="" ProductID="{aaaade39-2bac-4ad6-ba6c-27ea892759a3}" Title="OxTube" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="Xeraxic Software" Description="Real-time app for Oxford Tube stops in both Oxford and London." Publisher="OxTube" PublisherID="{8a8f6d10-2f37-4709-86c6-1068b4a085a9}">
     <IconPath IsRelative="true" IsResource="false">Assets\ApplicationIcon.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_NETWORKING" />
@@ -29,8 +29,7 @@
           </BackTitle>
           <DeviceLockImageURI>
           </DeviceLockImageURI>
-          <HasLarge>
-          </HasLarge>
+          <HasLarge>False</HasLarge>
         </TemplateFlip>
       </PrimaryToken>
     </Tokens>
