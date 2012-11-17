@@ -43,7 +43,9 @@ namespace OxTube
             if (Debugger.IsAttached)
             {
                 // Display the current frame rate counters.
+#if !MARKETPLACE
                 Application.Current.Host.Settings.EnableFrameRateCounter = true;
+#endif
 
                 // Show the areas of the app that are being redrawn in each frame.
                 //Application.Current.Host.Settings.EnableRedrawRegions = true;
