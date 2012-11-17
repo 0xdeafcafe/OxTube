@@ -33,7 +33,7 @@ namespace OxTube.Pages
         private void lbToLondon_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             // Save Stop Info
-            App.SelectedStopInfo = ((ListBoxItem)lbToLondon.SelectedItem).Content as HubViewModel.StopInfo;
+            App.SelectedStopInfo = lbToLondon.SelectedItem as HubViewModel.StopInfo;
 
             // Navigate to Stop Page
             NavigationService.Navigate(new Uri("/Pages/Stop.xaml", UriKind.Relative));
@@ -42,7 +42,7 @@ namespace OxTube.Pages
         private void lbToOxford_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             // Save Stop Info
-            App.SelectedStopInfo = ((ListBoxItem)lbToOxford.SelectedItem).Content as HubViewModel.StopInfo;
+            App.SelectedStopInfo = lbToOxford.SelectedItem as HubViewModel.StopInfo;
 
             // Navigate to Stop Page
             NavigationService.Navigate(new Uri("/Pages/Stop.xaml", UriKind.Relative));

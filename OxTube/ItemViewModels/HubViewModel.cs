@@ -18,6 +18,9 @@ namespace OxTube.ItemViewModels
             public string StopName { get; set; }
             public uint StopCode { get; set; }
             public string StopURL { get; set; }
+            public string StopDirection { get; set; }
+
+            public string StopDirectionFrendly { get; set; }
         }
 
         private ObservableCollection<StopInfo> _toOxford = new ObservableCollection<StopInfo>();
@@ -26,10 +29,12 @@ namespace OxTube.ItemViewModels
         public ObservableCollection<StopInfo> ToOxford
         {
             get { return _toOxford; }
+            set { _toOxford = value; NotifyPropertChanged("ToOxford"); }
         }
         public ObservableCollection<StopInfo> ToLondon
         {
             get { return _toLondon; }
+            set { _toLondon = value; NotifyPropertChanged("ToLondon"); }
         }
         public enum Stops { ToOxford, ToLondon }
         public async Task LoadStopInfo(Stops stop)
@@ -39,17 +44,26 @@ namespace OxTube.ItemViewModels
             switch (stop)
             {
                 case Stops.ToLondon:
-                    _toLondon.Clear();
+                    ToLondon.Clear();
                     stopJSONdata = VariousFunctions.GetStringFromResources("Resources/StopData/TowardsLondon.json");
-                    _toLondon = JsonConvert.DeserializeObject<ObservableCollection<StopInfo>>(stopJSONdata);
-                    NotifyPropertChanged("ToLondon");
+                    ToLondon = JsonConvert.DeserializeObject<ObservableCollection<StopInfo>>(stopJSONdata);
+                    for (int i = 0; i < ToLondon.Count; i++)
+                    {
+                        ToLondon[i].StopDirection = "tl";
+                        ToLondon[i].StopDirectionFrendly = "Towards: London";
+                    }
+                    
                     break;
 
                 case Stops.ToOxford:
-                    _toOxford.Clear();
+                    ToOxford.Clear();
                     stopJSONdata = VariousFunctions.GetStringFromResources("Resources/StopData/TowardsOxford.json");
-                    _toOxford = JsonConvert.DeserializeObject<ObservableCollection<StopInfo>>(stopJSONdata);
-                    NotifyPropertChanged("ToOxford");
+                    ToOxford = JsonConvert.DeserializeObject<ObservableCollection<StopInfo>>(stopJSONdata);
+                    for (int i = 0; i < ToOxford.Count; i++)
+                    {
+                        ToOxford[i].StopDirection = "to";
+                        ToOxford[i].StopDirectionFrendly = "Towards: Oxford";
+                    }
                     break;
             }
         }

@@ -122,6 +122,7 @@
     <None Include="Properties\WMAppManifest.xml">
       <SubType>Designer</SubType>
     </None>
+    <Content Include="Assets\AppBar\refresh.png" />
     <Content Include="Assets\Icons\navigation.png" />
     <Content Include="Resources\StopData\TowardsLondon.json" />
     <Content Include="Resources\StopData\TowardsOxford.json" />

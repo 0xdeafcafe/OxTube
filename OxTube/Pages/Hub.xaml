@@ -4,6 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
     xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
@@ -20,7 +21,8 @@
             <!--Panorama item one-->
             <phone:PanoramaItem Header="to oxford">
                 <Grid>
-                    <ListBox x:Name="lbToOxford" ItemsSource="{Binding ToOxford}" SelectionChanged="lbToOxford_SelectionChanged">
+                    <ListBox x:Name="lbToOxford" ItemsSource="{Binding ToOxford}" 
+                             SelectionChanged="lbToOxford_SelectionChanged" toolkit:TiltEffect.IsTiltEnabled="True">
                         <ListBox.ItemTemplate>
                             <DataTemplate>
                                 <Grid Height="60">
@@ -47,7 +49,8 @@
             <!--Panorama item two-->
             <phone:PanoramaItem Header="to london">
                 <Grid>
-                    <ListBox x:Name="lbToLondon" ItemsSource="{Binding ToLondon}" SelectionChanged="lbToLondon_SelectionChanged">
+                    <ListBox x:Name="lbToLondon" ItemsSource="{Binding ToLondon}" 
+                             SelectionChanged="lbToLondon_SelectionChanged" toolkit:TiltEffect.IsTiltEnabled="True">
                         <ListBox.ItemTemplate>
                             <DataTemplate>
                                 <Grid Height="60">
