@@ -30,13 +30,12 @@ namespace OxTube_Web
             public int ArrivalTime { get; set; }
         }
 
-        public string return_string = null;
-
         protected void Page_Load(object sender, EventArgs e)
         {
             // Create Argument Storage
             string stopID = null;
             string direction = null;
+            string return_string = null;
 
             // Store Data in them
             try
@@ -57,17 +56,20 @@ namespace OxTube_Web
                 stopID = "69347426";
                 direction = "to";
 #else
-                error_code = "missing params";
+                return_string = "missing params";
                 Response.Write(return_string);
                 return;
 #endif
             }
 
             // Parse JSON
-            string pathTO = File.ReadAllText(Server.MapPath("/App_Data/StopData/") + "TowardsOxford.json");
-
-            _toOxford = json.Deserialize<IList<StopInfo>>(pathTO);
+#if DEBUG
+            _toOxford = json.Deserialize<IList<StopInfo>>(File.ReadAllText(Server.MapPath("/App_Data/StopData/") + "TowardsOxford.json"));
             _toLondon = json.Deserialize<IList<StopInfo>>(File.ReadAllText(Server.MapPath("/App_Data/StopData/") + "TowardsLondon.json"));
+#else
+            _toOxford = json.Deserialize<IList<StopInfo>>(File.ReadAllText(@"D:\Hosting\8582025\html\OxTube\App_Data\StopData\TowardsOxford.json"));
+            _toLondon = json.Deserialize<IList<StopInfo>>(File.ReadAllText(@"D:\Hosting\8582025\html\OxTube\App_Data\StopData\TowardsLondon.json"));
+#endif
 
             // Get the Stop that we want
             StopInfo userRequestedStop = GetStopInfoFromID(stopID, direction);
@@ -78,7 +80,7 @@ namespace OxTube_Web
 #if DEBUG
                 
 #else
-                error_code = "invalid stopid or direction";
+                return_string = "invalid stopid or direction";
                 Response.Write(return_string);
                 return;
 #endif
@@ -102,7 +104,7 @@ namespace OxTube_Web
 #if DEBUG
                 
 #else
-                error_code = "unable to parse page";
+                return_string = "unable to parse page";
                 Response.Write(return_string);
                 return;
 #endif
@@ -151,14 +153,14 @@ namespace OxTube_Web
 #if DEBUG
 
 #else
-                error_code = "unable to parse page";
+                return_string = "unable to parse page";
                 Response.Write(return_string);
                 return;
 #endif
             }
 
             // Create JSON
-            string return_string = json.Serialize(ArrivalTimes);
+            return_string = json.Serialize(ArrivalTimes);
             Response.Write(return_string);
         }
 
