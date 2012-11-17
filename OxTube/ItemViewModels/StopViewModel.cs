@@ -9,6 +9,7 @@ using System.Net;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Media;
 
 namespace OxTube.ItemViewModels
@@ -64,15 +65,22 @@ namespace OxTube.ItemViewModels
 
                 // Parse JSON
                 StopTimeInfo = JsonConvert.DeserializeObject<IList<TimeEntry>>(jsonData);
-                
+
                 // Make the Output friendly for the DataBinded values
                 for (int i = 0; i < StopTimeInfo.Count; i++)
                     StopTimeInfo[i] = await CreateFriendlyTime(StopTimeInfo[i]);
 
-                await _parent.HideRefreshUI();
+                // Hide Pending UI
+                _parent.HideRefreshUI();
             }
             else
-                await _parent.HideRefreshUI();
+            {
+                // Tell user there was an error
+                MessageBox.Show("Unable to connect to server. Please check your connection and tap the refresh button.", "error", MessageBoxButton.OK);
+
+                // Hide Pending UI
+                _parent.HideRefreshUI();
+            }
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

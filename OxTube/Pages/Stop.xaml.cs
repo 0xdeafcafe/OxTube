@@ -36,6 +36,14 @@ namespace OxTube.Pages
             btnRefresh_Click(null, null);
         }
 
+        async protected override void OnBackKeyPress(CancelEventArgs e)
+        {
+            base.OnBackKeyPress(e);
+
+            if (gridMask.Visibility == System.Windows.Visibility.Visible)
+                e.Cancel = true;
+        }
+
         public bool IsRefreshing;
         async private void btnRefresh_Click(object sender, EventArgs e)
         {
@@ -43,10 +51,12 @@ namespace OxTube.Pages
             try
             {
                 // Show UI
-                btnRefresh.IsEnabled = false;
+                if (btnRefresh != null)
+                    btnRefresh.IsEnabled = false;
                 gridMask.Visibility = System.Windows.Visibility.Visible;
 
                 // Progress Bar
+                SystemTray.ProgressIndicator = new ProgressIndicator();
                 SystemTray.ProgressIndicator.IsIndeterminate = true;
                 SystemTray.ProgressIndicator.IsVisible = true;
                 SystemTray.ProgressIndicator.Text = "Refreshing Times...";
@@ -59,21 +69,27 @@ namespace OxTube.Pages
             else
                 PageViewModel.LoadTimeData();
         }
-        async public Task HideRefreshUI()
+        public void HideRefreshUI()
         {
-            // Hide Pending UI
-            try
+            Dispatcher.BeginInvoke(new Action(delegate
             {
-                // Hide UI
-                btnRefresh.IsEnabled = true;
-                gridMask.Visibility = System.Windows.Visibility.Collapsed;
+                // Hide Pending UI
+                try
+                {
+                    // Hide UI
+                    if (btnRefresh != null)
+                        btnRefresh.IsEnabled = true;
+                    gridMask.Visibility = System.Windows.Visibility.Collapsed;
 
-                // Progress Bar
-                SystemTray.ProgressIndicator.IsIndeterminate = true;
-                SystemTray.ProgressIndicator.IsVisible = true;
-                SystemTray.ProgressIndicator.Text = "Refreshing Times...";
-            }
-            catch { }
+                    // Progress Bar
+                    SystemTray.ProgressIndicator = new ProgressIndicator();
+                    SystemTray.ProgressIndicator.IsVisible = false;
+                }
+                catch (Exception ex)
+                {
+
+                }
+            }));
         }
     }
 }

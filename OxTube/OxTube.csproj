@@ -123,7 +123,10 @@
       <SubType>Designer</SubType>
     </None>
     <Content Include="Assets\AppBar\refresh.png" />
-    <Content Include="Assets\Icons\navigation.png" />
+    <Content Include="Assets\Icons\heart_white.png" />
+    <Content Include="Assets\Icons\heart_black.png" />
+    <Content Include="Assets\Icons\navigation_black.png" />
+    <Content Include="Assets\Icons\navigation_white.png" />
     <Content Include="Resources\StopData\TowardsLondon.json" />
     <Content Include="Resources\StopData\TowardsOxford.json" />
   </ItemGroup>

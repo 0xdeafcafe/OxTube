@@ -9,13 +9,14 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
-    Foreground="{StaticResource PhoneForegroundBrush}"
+    Foreground="Black"
+    Background="White"
     SupportedOrientations="Portrait" Orientation="Portrait"
     mc:Ignorable="d"
     shell:SystemTray.IsVisible="True">
 
     <!--LayoutRoot is the root grid where all page content is placed-->
-    <Grid x:Name="LayoutRoot" Background="Transparent">
+    <Grid x:Name="LayoutRoot" Background="White">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
@@ -23,14 +24,14 @@
 
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock Text="{Binding StopHeaderInfo.StopName}" Style="{StaticResource PhoneTextNormalStyle}" TextTrimming="WordEllipsis"/>
-            <TextBlock Text="{Binding StopHeaderInfo.StopDirectionFrendly}" Style="{StaticResource PhoneTextNormalStyle}" TextTrimming="WordEllipsis" FontSize="16"/>
-            <TextBlock Text="{Binding StopHeaderInfo.StopCode}" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}" TextTrimming="WordEllipsis"/>
+            <TextBlock Text="{Binding StopHeaderInfo.StopName}" Style="{StaticResource PhoneTextNormalStyle}" TextTrimming="WordEllipsis" Foreground="Black"/>
+            <TextBlock Text="{Binding StopHeaderInfo.StopDirectionFrendly}" Style="{StaticResource PhoneTextNormalStyle}" TextTrimming="WordEllipsis" FontSize="16" Foreground="Black"/>
+            <TextBlock Text="{Binding StopHeaderInfo.StopCode}" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}" TextTrimming="WordEllipsis" Foreground="Black"/>
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="0,0,0,0">
-            <Grid Height="60" Background="{Binding BackgroundColour}"
+            <Grid Height="60"
                   HorizontalAlignment="Stretch" VerticalAlignment="Top">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="85" />
@@ -41,17 +42,17 @@
                 <Grid Grid.Column="0">
                     <TextBlock Text="Service;" 
                                     VerticalAlignment="Center" HorizontalAlignment="Left"
-                                    Margin="10,0,0,0" TextTrimming="WordEllipsis" Foreground="White" FontSize="18" FontFamily="Segoe WP"/>
+                                    Margin="10,0,0,0" TextTrimming="WordEllipsis" Foreground="Black" FontSize="18" FontFamily="Segoe WP"/>
                 </Grid>
                 <Grid Grid.Column="1">
                     <TextBlock Text="Due In;" 
                                     VerticalAlignment="Center" HorizontalAlignment="Left"
-                                    Margin="20,0,0,0" TextTrimming="WordEllipsis" Foreground="White" FontSize="18" FontFamily="Segoe WP"/>
+                                    Margin="20,0,0,0" TextTrimming="WordEllipsis" Foreground="Black" FontSize="18" FontFamily="Segoe WP"/>
                 </Grid>
                 <Grid Grid.Column="2">
                     <TextBlock Text="Destination;" 
                                     VerticalAlignment="Center" HorizontalAlignment="Left"
-                                    Margin="20,0,0,0" TextTrimming="WordEllipsis" Foreground="White" FontSize="18" FontFamily="Segoe WP"/>
+                                    Margin="20,0,0,0" TextTrimming="WordEllipsis" Foreground="Black" FontSize="18" FontFamily="Segoe WP"/>
                 </Grid>
 
             </Grid>
@@ -64,7 +65,7 @@
                 </ListBox.ItemContainerStyle>
                 <ListBox.ItemTemplate>
                     <DataTemplate>
-                        <Grid Height="60" Background="{Binding BackgroundColour}">
+                        <Grid Height="60" Margin="0,0,0,-1" Background="{Binding BackgroundColour}">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="85" />
                                 <ColumnDefinition Width="180" />
@@ -74,17 +75,17 @@
                             <Grid Grid.Column="0">
                                 <TextBlock Text="{Binding ServiceName}" 
                                     VerticalAlignment="Center" HorizontalAlignment="Left"
-                                    Margin="10,0,0,0" TextTrimming="WordEllipsis" Foreground="White" FontSize="24" FontFamily="Segoe WP"/>
+                                    Margin="10,0,0,0" TextTrimming="WordEllipsis" Foreground="Black" FontSize="24" FontFamily="Segoe WP"/>
                             </Grid>
                             <Grid Grid.Column="1">
                                 <TextBlock Text="{Binding ArrivalTimeFriendly}" 
                                     VerticalAlignment="Center" HorizontalAlignment="Left"
-                                    Margin="20,0,0,0" TextTrimming="WordEllipsis" Foreground="White" FontSize="24" FontFamily="Segoe WP"/>
+                                    Margin="20,0,0,0" TextTrimming="WordEllipsis" Foreground="Black" FontSize="24" FontFamily="Segoe WP"/>
                             </Grid>
                             <Grid Grid.Column="2">
                                 <TextBlock Text="{Binding Destination}" 
                                     VerticalAlignment="Center" HorizontalAlignment="Left"
-                                    Margin="20,0,0,0" TextTrimming="WordEllipsis" Foreground="White" FontSize="24" FontFamily="Segoe WP"/>
+                                    Margin="20,0,0,0" TextTrimming="WordEllipsis" Foreground="Black" FontSize="24" FontFamily="Segoe WP"/>
                             </Grid>
 
                         </Grid>
@@ -93,7 +94,7 @@
             </ListBox>
         </Grid>
         
-        <Grid Grid.RowSpan="2" x:Name="gridMask" Opacity="0.7" Background="#FF000000" Visibility="Collapsed" />
+        <Grid Grid.RowSpan="2" x:Name="gridMask" Opacity="0.7" Background="#FFFFFFFF" Visibility="Collapsed" />
     </Grid>
 
     <phone:PhoneApplicationPage.ApplicationBar>
