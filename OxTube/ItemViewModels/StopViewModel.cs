@@ -63,20 +63,31 @@ namespace OxTube.ItemViewModels
                 //Hold the JSON returned from the API call
                 string jsonData = e.Result;
 
-                // Parse JSON
-                StopTimeInfo = JsonConvert.DeserializeObject<IList<TimeEntry>>(jsonData);
+                try
+                {
+                    // Parse JSON
+                    StopTimeInfo = JsonConvert.DeserializeObject<IList<TimeEntry>>(jsonData);
 
-                // Make the Output friendly for the DataBinded values
-                for (int i = 0; i < StopTimeInfo.Count; i++)
-                    StopTimeInfo[i] = await CreateFriendlyTime(StopTimeInfo[i]);
+                    // Make the Output friendly for the DataBinded values
+                    for (int i = 0; i < StopTimeInfo.Count; i++)
+                        StopTimeInfo[i] = await CreateFriendlyTime(StopTimeInfo[i]);
 
-                // Hide Pending UI
-                _parent.HideRefreshUI();
+                    // Hide Pending UI
+                    _parent.HideRefreshUI();
+                }
+                catch
+                {
+                    // Tell user there was an error
+                    MessageBox.Show("The connection to the server was unsuccessful.", "Error", MessageBoxButton.OK);
+
+                    // Hide Pending UI
+                    _parent.HideRefreshUI();
+                }
             }
             else
             {
                 // Tell user there was an error
-                MessageBox.Show("Unable to connect to server. Please check your connection and tap the refresh button.", "error", MessageBoxButton.OK);
+                MessageBox.Show("Unable to connect to server. Please check your connection and tap the refresh button.", "Error", MessageBoxButton.OK);
 
                 // Hide Pending UI
                 _parent.HideRefreshUI();
