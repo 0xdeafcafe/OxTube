@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Deployment xmlns="http://schemas.microsoft.com/windowsphone/2009/deployment" AppPlatformVersion="7.1">
+  <App xmlns="" ProductID="{3a7dd8d2-7707-4dcd-8b5e-6da3ee30a084}" Title="OxTube" RuntimeType="Silverlight" Version="2.0.0.0" Genre="apps.normal" Author="Xeraxic Software" Description="Real-time app for Oxford Tube stops in both Oxford and London." Publisher="Xeraxic Software" BitsPerPixel="32">
+    <IconPath IsRelative="true" IsResource="false">Assets\ApplicationIcon.png</IconPath>
+    <Capabilities>
+      <Capability Name="ID_CAP_NETWORKING" />
+      <Capability Name="ID_CAP_WEBBROWSERCOMPONENT" />
+    </Capabilities>
+    <Tasks>
+      <DefaultTask Name="_default" NavigationPage="Pages/Hub.xaml" />
+    </Tasks>
+    <Tokens>
+      <PrimaryToken TokenID="OxTube.UI.WinPhone7Token" TaskName="_default">
+        <TemplateType5>
+          <BackgroundImageURI IsRelative="true" IsResource="false">Assets\AppTile.png</BackgroundImageURI>
+          <Count>0</Count>
+          <Title>OxTube</Title>
+        </TemplateType5>
+      </PrimaryToken>
+    </Tokens>
+  </App>
+</Deployment>
